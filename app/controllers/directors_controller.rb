@@ -18,4 +18,8 @@ class DirectorsController < ApplicationController
     render({ :template => "director_templates/youngest.html.erb"})
   end
 
+  def director_details
+    render({ :template => "director_templates/show.html.erb"})
+  end
+
 end
