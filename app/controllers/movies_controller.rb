@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
 
   def index
-    @list_of_movies = Movies.all
+    @list_of_movies = Movie.all
 
     render({ :template => "movie_templates/index.html.erb"})
   end
@@ -12,7 +12,8 @@ class MoviesController < ApplicationController
 
      the_id = params.fetch("an_id")
 
-     @the_movie = Movies.where({ :id => the_id }).at(0)
+     @the_movie = Movie.where({ :id => the_id }).at(0)
  
      render({ :template => "movie_templates/show.html.erb"})   
   end
+end

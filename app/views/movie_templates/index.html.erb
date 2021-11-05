@@ -13,11 +13,11 @@
   <tr>
     <td><%= a_thing.id %></td>
     <td>
-      <img src="<%= a_thing.image %>">"
+      <img src="<%= a_thing.image %>" style="width:250px;">"
     </td>
     <td><%= a_thing.title %></td>
     <td><%= a_thing.year %></td>
-    <td><%= Directors.where({ :id => a_thing.director_id }).at(0).name %></td>
+    <td><%= Director.where({ :id => a_thing.director_id }).at(0).name %></td>
     <td> 
       <a href="/movies/<%= a_thing.id %>">
         Show details
